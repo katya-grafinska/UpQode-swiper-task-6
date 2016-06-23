@@ -107,7 +107,12 @@
 					$t.find('.swiper-slide.active').removeClass('active');
 				}
 			});
+
 			swipers['swiper-'+index].reInit();
+			$(window).on('resize',function(){
+			  swipers['swiper-'+index].reInit();
+			});
+			
 				if($t.attr('data-slides-per-view')=='responsive'){
 					var paginationSpan = $t.find('.pagination span');
 					var paginationSlice = paginationSpan.hide().slice(0,(paginationSpan.length+1-slidesPerViewVar));
