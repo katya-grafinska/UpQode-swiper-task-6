@@ -148,7 +148,7 @@
 		swipers['swiper-'+$(this).parent().attr('id')].swipeNext();
 	});
     
-    $('.swiper-outer-left').on('click', function(){
+  $('.swiper-outer-left').on('click', function(){
 		swipers['swiper-'+$(this).parent().find('.swiper-container').attr('id')].swipePrev();
 	});
 
